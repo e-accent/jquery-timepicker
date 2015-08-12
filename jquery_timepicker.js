@@ -425,7 +425,8 @@
 		}
 
 		if (settings.useSelect) {
-			list = $('<select />', { 'class': 'ui-timepicker-select' });
+			var disabled = $(self).is(":disabled");
+			list = $('<select />', { 'class': 'ui-timepicker-select', 'disabled': disabled });
 			var wrapped_list = list;
 		} else {
 			list = $('<ul />', { 'class': 'ui-timepicker-list' });
